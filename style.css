@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --graphite: #464646;
+  --light-gray: #E9E9E9;
+  --rose: #fd8c94;
+}
