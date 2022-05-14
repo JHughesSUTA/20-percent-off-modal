@@ -6,7 +6,7 @@
 
 :root {
   --graphite: #464646;
-  --light-gray: #E9E9E9;
+  --light-gray: #e9e9e9;
   --rose: #fd8c94;
 }
 
@@ -23,14 +23,14 @@ body {
 }
 
 .modal-container {
-  padding: 0 40px 45px 40px;
+  padding: 37px 40px 45px 40px;
 }
 
 .confirm-modal__heading {
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: 50px;
   letter-spacing: 10px;
-  padding-top: 37px;
+  line-height: 1.32;
 }
 
 .confirm-modal__separator {
@@ -65,15 +65,15 @@ body {
 }
 
 .confirm-modal__paragraph {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 30px;
-  letter-spacing: .7px;
-  margin: 27px 0 27px 0;
+  letter-spacing: 0.7px;
+  margin: 24px 0 27px 0;
 }
 
 .confirm-modal__link {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   display: inline-block;
   outline: 1px solid var(--rose);
   color: var(--rose);
@@ -82,8 +82,8 @@ body {
   letter-spacing: 3px;
   width: 100%;
   text-align: center;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .confirm-modal__link:hover {
@@ -104,4 +104,48 @@ body {
 
 .close-button:hover {
   color: var(--graphite);
+}
+
+@media (min-width: 800px) {
+  .modal {
+    width: 680px;
+  }
+
+  .modal-container {
+    padding: 100px 80px 98.5px;
+  }
+
+  .confirm-modal__heading {
+    font-size: 65px;
+    letter-spacing: 13px;
+    padding-top: 0;
+    line-height: normal;
+  }
+
+  .confirm-modal__paragraph {
+    line-height: normal;
+    letter-spacing: 0.7px;
+    margin: 19px 0 42px 0;
+  }
+
+  .confirm-modal__link {
+    width: 99px;
+    font-weight: bold;
+    outline: none;
+    border-bottom: 3px solid var(--rose);
+    padding: 0;
+    padding-bottom: 8.5px;
+    
+  }
+  
+  .confirm-modal__link:hover {
+    color: var(--graphite);
+    background-color: white;
+    border-bottom: 3px solid var(--graphite);
+  }
+
+  .close-button {
+    top: 14px;
+    right: 22px;
+  }
 }
