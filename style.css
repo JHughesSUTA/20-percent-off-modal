@@ -9,3 +9,89 @@
   --light-gray: #E9E9E9;
   --rose: #fd8c94;
 }
+
+body {
+  background-color: darkgray;
+}
+
+.modal {
+  background-color: #ffffff;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.modal__content {
+  font-family: 'Prata', serif;
+  color: var(--graphite);
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.modal__content__tagline {
+  font-size: 2.8125rem;
+  line-height: 59px;
+  letter-spacing: 7px;
+}
+
+.modal__content__separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--rose);
+  font-size: 4.0625rem;
+}
+
+.modal__content__separator__line {
+  border-bottom: 1px solid var(--light-gray);
+  width: 100%;
+}
+
+.modal__content__deal {
+  display: flex;
+}
+
+#deal__twenty {
+  font-size: 9rem;
+}
+
+#deal__percent {
+  font-size: 4.375rem;
+}
+
+#deal__off {
+  font-size: 1.4375rem;
+}
+
+.modal__form {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#email {
+  border: none;
+  border-bottom: 3px solid var(--graphite);
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+#email::placeholder {
+  color: var(--graphite);
+  letter-spacing: 3px;
+}
+
+#sign-up {
+  background-color: #ffffff;
+  border: 1px solid var(--rose);
+  color: var(--rose);
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-top: 30.5px;
+  margin-bottom: 35px;
+}
