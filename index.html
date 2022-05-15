@@ -15,43 +15,45 @@
   </head>
   <body>
     <div class="modal">
-      <div class="modal__content">
-        <div class="modal__content__tagline">
-          <p>Get Your Style On</p>
+      <div class="form-modal-container">
+        <div class="modal__content">
+          <div class="modal__content__tagline">
+            <p>Get Your Style On</p>
+          </div>
+          <div class="modal__content__separator">
+            <div class="modal__content__separator__line"></div>
+            <p class="modal__content__separator__text">&</p>
+            <div class="modal__content__separator__line"></div>
+          </div>
+          <!-- <div class="modal__content__deal"> -->
+          <!-- <p id="deal__twenty">20</p>
+            <div>
+              <p id="deal__percent">%</p>
+              <p id="deal__off">OFF</p>
+            </div> -->
+          <p class="deal__text">
+            <span class="deal__text__twenty">20</span>
+            <!-- <span> -->
+            <span class="deal__text__percent">%</span>
+            <span class="deal__text__off">OFF</span>
+            <!-- </span> -->
+          </p>
+          <!-- </div> -->
         </div>
-        <div class="modal__content__separator">
-          <div class="modal__content__separator__line"></div>
-          <p class="modal__content__separator__text">&</p>
-          <div class="modal__content__separator__line"></div>
-        </div>
-        <!-- <div class="modal__content__deal"> -->
-        <!-- <p id="deal__twenty">20</p>
-          <div>
-            <p id="deal__percent">%</p>
-            <p id="deal__off">OFF</p>
-          </div> -->
-        <p class="deal__text">
-          <span class="deal__text__twenty">20</span>
-          <!-- <span> -->
-          <span class="deal__text__percent">%</span>
-          <span class="deal__text__off">OFF</span>
-          <!-- </span> -->
-        </p>
-        <!-- </div> -->
+        <form class="modal__form" action="">
+          <div class="form-control">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="form-control">
+            <input type="submit" id="sign-up" value="Sign Up" />
+          </div>
+        </form>
       </div>
-      <form class="modal__form" action="">
-        <div class="form-control">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email Address"
-          />
-        </div>
-        <div class="form-control">
-          <input type="submit" id="sign-up" value="Sign Up" />
-        </div>
-      </form>
     </div>
   </body>
 </html>
