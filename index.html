@@ -35,7 +35,11 @@
             <span class="form-popup__info__deal__text-off">OFF</span>
           </p>
         </div>
-        <form class="form-popup__form" onsubmit="event.preventDefault(); handleSubmit();" action="">
+        <form
+          class="form-popup__form"
+          onsubmit="event.preventDefault(); handleSubmit();"
+          action=""
+        >
           <div class="form-control">
             <input
               type="email"
@@ -45,7 +49,11 @@
             />
           </div>
           <div class="form-control">
-            <input type="submit" id="form-popup__form__sign-up" value="Sign Up" />
+            <input
+              type="submit"
+              id="form-popup__form__sign-up"
+              value="Sign Up"
+            />
           </div>
         </form>
       </div>
@@ -79,9 +87,12 @@
   const openPopup = document.querySelector(".open-button");
   const closeFormPopup = document.querySelector("#form-close-button");
   const closeConfirmPopup = document.querySelector("#confirm-close-button");
-  const confirmPopupLink = document.querySelector(".confirm-popup__link")
+  const confirmPopupLink = document.querySelector(".confirm-popup__link");
+
+  formPopup.showModal();
 
   openPopup.addEventListener("click", () => {
+    document.getElementById("form-popup__form__email").value = "";
     formPopup.showModal();
   });
 
@@ -99,6 +110,6 @@
 
   const handleSubmit = () => {
     formPopup.close();
-    confirmPopup.showModal()
-  }
+    confirmPopup.showModal();
+  };
 </script>

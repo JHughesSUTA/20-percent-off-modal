@@ -12,15 +12,17 @@
   --rose: #fd8c94;
 }
 
-p, h1 {
+p,
+h1 {
   margin: 0;
 }
 
 .popup {
   background-color: #ffffff;
-  width: 350px;
+  max-width: 350px;
   position: relative;
   border: none;
+  overflow: auto;
 }
 
 .popup::backdrop {
@@ -38,10 +40,10 @@ p, h1 {
   cursor: pointer;
 }
 
-.close-button:hover {
+.close-button:hover,
+.close-button:focus {
   color: var(--graphite);
 }
-
 
 /* Form Popup Styles -- mobile */
 .form-popup__bar {
@@ -89,6 +91,7 @@ p, h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: -32px;
+  z-index: -1;
 }
 
 .form-popup__info__deal__text-twenty {
@@ -125,6 +128,7 @@ p, h1 {
   text-align: center;
   width: 100%;
   font-weight: bold;
+  z-index: 1;
 }
 
 #form-popup__form__email::placeholder {
@@ -155,7 +159,6 @@ p, h1 {
   color: #ffffff;
   background-color: var(--rose);
 }
-
 
 /* Confirm Popup Styles -- mobile */
 .confirm-popup__container {
@@ -222,18 +225,23 @@ p, h1 {
   padding-bottom: 18px;
 }
 
-.confirm-popup__link:hover {
+.confirm-popup__link:hover,
+.confirm-popup__link:focus   {
   color: #ffffff;
   background-color: var(--rose);
 }
 
+.confirm-popup__link:focus {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
 
 /* =============== MOBILE STYLES =============== */
 
 @media (min-width: 800px) {
   /* Universal Popup Styles -- large screen */
   .popup {
-    width: 680px;
+    min-width: 680px;
     position: relative;
   }
 
@@ -241,7 +249,6 @@ p, h1 {
     top: 14px;
     right: 22px;
   }
-
 
   /* Form Popup Styles -- large screen */
   .form-popup__container {
@@ -349,12 +356,16 @@ p, h1 {
     cursor: pointer;
   }
 
-  #form-popup__form__sign-up:hover,
-  #form-popup__form__sign-up:focus {
-    color: #ffffff;
-    background-color: var(--rose);
+  #form-popup__form__sign-up:hover {
+    color: var(--rose);
+    background-color: #ffffff;
+    opacity: 0.7;
   }
 
+  #form-popup__form__sign-up:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
 
   /* Confirm Popup Styles -- large screen */
   .confirm-popup__container {
@@ -381,13 +392,16 @@ p, h1 {
     border-bottom: 3px solid var(--rose);
     padding: 0;
     padding-bottom: 8.5px;
-    
   }
-  
+
   .confirm-popup__link:hover {
-    color: var(--graphite);
+    opacity: 0.7;
+    color: var(--rose);
     background-color: white;
-    border-bottom: 3px solid var(--graphite);
+  }
+
+  .confirm-popup__link:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
   }
 }
-
