@@ -14,40 +14,91 @@
     />
   </head>
   <body>
-    <div class="modal">
-      <button class="close-button">&#x2715;</button>
-      <span class="bar bar--top"></span>
-      <div class="form-modal-container">
-        <div class="modal__content">
-          <div class="modal__content__tagline">
+    <button class="button open-button">open modal</button>
+
+    <dialog class="popup" id="form-popup">
+      <button class="close-button" id="form-close-button">&#x2715;</button>
+      <span class="form-popup__bar form-popup__bar--top"></span>
+      <div class="form-popup__container">
+        <div class="form-popup__info">
+          <div class="form-popup__info__tag">
             <p>Get Your Style On</p>
           </div>
-          <div class="modal__content__separator">
-            <div class="modal__content__separator__line"></div>
-            <p class="modal__content__separator__text">&</p>
-            <div class="modal__content__separator__line"></div>
+          <div class="form-popup__info__divider">
+            <div class="form-popup__info__divider__line"></div>
+            <p class="form-popup__info__divider__text">&</p>
+            <div class="form-popup__info__divider__line"></div>
           </div>
-          <p class="deal__text">
-            <span class="deal__text__twenty">20</span>
-            <span class="deal__text__percent">%</span>
-            <span class="deal__text__off">OFF</span>
+          <p class="form-popup__info__deal">
+            <span class="form-popup__info__deal__text-twenty">20</span>
+            <span class="form-popup__info__deal__text-percent">%</span>
+            <span class="form-popup__info__deal__text-off">OFF</span>
           </p>
         </div>
-        <form class="modal__form" action="">
+        <form class="form-popup__form" onsubmit="event.preventDefault(); handleSubmit();" action="">
           <div class="form-control">
             <input
               type="email"
-              id="email"
+              id="form-popup__form__email"
               name="email"
               placeholder="Email Address"
             />
           </div>
           <div class="form-control">
-            <input type="submit" id="sign-up" value="Sign Up" />
+            <input type="submit" id="form-popup__form__sign-up" value="Sign Up" />
           </div>
         </form>
       </div>
-      <span class="bar bar--bottom"></span>
-    </div>
+      <span class="form-popup__bar form-popup__bar--bottom"></span>
+    </dialog>
+
+    <dialog class="popup confirm-popup" id="confirm-popup">
+      <button class="close-button" id="confirm-close-button">&#x2715;</button>
+      <div class="confirm-popup__container">
+        <h1 class="confirm-popup__heading">Just Like Old Friends</h1>
+        <div class="confirm-popup__divider">
+          <span class="dot-small"></span>
+          <span class="confirm-popup__divider__line"></span>
+          <span class="dot-small"></span>
+          <span class="dot-large"></span>
+          <span class="dot-small"></span>
+        </div>
+        <p class="confirm-popup__statement">
+          We'll keep you updated on any deals, news, or gossip that comes our
+          way!
+        </p>
+        <a class="confirm-popup__link" href="#">Go Shop!</a>
+      </div>
+    </dialog>
   </body>
 </html>
+
+<script>
+  const formPopup = document.querySelector("#form-popup");
+  const confirmPopup = document.querySelector("#confirm-popup");
+  const openPopup = document.querySelector(".open-button");
+  const closeFormPopup = document.querySelector("#form-close-button");
+  const closeConfirmPopup = document.querySelector("#confirm-close-button");
+  const confirmPopupLink = document.querySelector(".confirm-popup__link")
+
+  openPopup.addEventListener("click", () => {
+    formPopup.showModal();
+  });
+
+  closeFormPopup.addEventListener("click", () => {
+    formPopup.close();
+  });
+
+  closeConfirmPopup.addEventListener("click", () => {
+    confirmPopup.close();
+  });
+
+  confirmPopupLink.addEventListener("click", () => {
+    confirmPopup.close();
+  });
+
+  const handleSubmit = () => {
+    formPopup.close();
+    confirmPopup.showModal()
+  }
+</script>
