@@ -88,11 +88,12 @@
   const closeFormPopup = document.querySelector("#form-close-button");
   const closeConfirmPopup = document.querySelector("#confirm-close-button");
   const confirmPopupLink = document.querySelector(".confirm-popup__link");
+  const signUpButton = document.getElementById("form-popup__form__email");
 
   formPopup.showModal();
 
   openPopup.addEventListener("click", () => {
-    document.getElementById("form-popup__form__email").value = "";
+    signUpButton.value = "";
     formPopup.showModal();
   });
 
@@ -109,6 +110,11 @@
   });
 
   const handleSubmit = () => {
+    if (signUpButton.value === '') {
+      alert("please enter your email");
+      return
+    }
+
     formPopup.close();
     confirmPopup.showModal();
   };

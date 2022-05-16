@@ -236,7 +236,7 @@ h1 {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-/* =============== MOBILE STYLES =============== */
+/* =============== DESKTOP STYLES =============== */
 
 @media (min-width: 800px) {
   /* Universal Popup Styles -- large screen */
@@ -259,8 +259,6 @@ h1 {
   .form-popup__info {
     display: flex;
     width: 580px;
-
-    /* justify-content: center; */
   }
 
   .form-popup__info__tag {
@@ -357,9 +355,7 @@ h1 {
   }
 
   #form-popup__form__sign-up:hover {
-    color: var(--rose);
-    background-color: #ffffff;
-    opacity: 0.7;
+    border-radius: 5px;
   }
 
   #form-popup__form__sign-up:focus {
